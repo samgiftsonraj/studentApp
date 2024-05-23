@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#1D1D1D</color>
+    <color name="lightblack">#000001</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="elevation">#EBEBEB</color>
+    <color name="green">#00373A</color>
+    <color name="lightgreen">#14E61C</color>
+    <color name="grey">#495C5C</color>
+    <color name="darkgrey">#FFFFFF</color>
+    <color name="lightgrey">#6A7383</color>
+    <color name="lightestgrey">#D8D8D8</color>
+    <color name="lightesdtgrey">#3482AE</color>
+    <color name="cardbg">#F0F9F9</color>
+    <color name="lightred">#FFE3E3</color>
+    <color name="red">#ff0000</color>
+    <color name="lighttgrey">#F5F4F9</color>
+    <color name="palewhite">#585E65</color>
+    <color name="indicatorcolor">#7F63E3</color>
+    <color name="progresscolor">#FF9857</color>
+    <color name="yellow">#E89701</color>
+    <color name="violet">#8A11D0</color>
+    <color name="lightviolet">#f4deff</color>
+    <color name="lightestviolet">#6F829F</color>
+    <color name="pink">#F8477B</color>
+    <color name="navyblue">#140154</color>
+    <color name="lightpink">#DCE3FF</color>
+    <color name="transparent">#00000000</color>
+    <color name="checkboxColor">#bcbcbc</color>
+</resources>

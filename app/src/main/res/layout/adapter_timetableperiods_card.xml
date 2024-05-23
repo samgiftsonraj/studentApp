@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    app:contentPadding="@dimen/_14sdp"
+    app:cardCornerRadius="4dp"
+    android:backgroundTint="@color/lightpink">
+
+    <TextView
+        android:id="@+id/PeriodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/helvetmedium"
+        android:text="@string/mathematics"
+        android:textColor="@color/navyblue"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TeacherName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/hettie_jones"
+        android:fontFamily="@font/yellixregular"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/PeriodName"
+        app:layout_constraintTop_toBottomOf="@+id/PeriodName" />
+
+
+
+</androidx.cardview.widget.CardView>

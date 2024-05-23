@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Greatify</string>
+    <string name="login_now">Login Now</string>
+    <string name="loginDescrp">Choose who you are and enter your\ncredetials to access your account</string>
+    <string name="i_am_a">I am a</string>
+    <string name="choose_school">Choose School</string>
+    <string name="mobilenumber">MobileNumber</string>
+    <string name="mobilenumberHint">MobileNumber</string>
+    <string name="studentidhint">StudentID</string>
+    <string name="studentid">StudentID</string>
+    <string name="sent_otp">Sent OTP</string>
+    <string name="todo">TODO</string>
+    <string name="todos">TODO</string>
+    <string name="stodo">TODO</string>
+    <string name="submit">Submit</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="otp_desc">Please Enter the OTP that received to \n your mobile number</string>
+    <string name="textview">TextView</string>
+    <string-array name="names">
+        <item>Sam</item>
+        <item>Joshua</item>
+        <item>Albert</item>
+        <item>Rego</item>
+        <item>jenkin</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Hi Andrews</string>
+    <string name="continue_courses">Continue Courses</string>
+    <string name="dell_13th_gen_laptop">Dell 13th Gen Laptop</string>
+    <string name="explore_products">Explore Products</string>
+    <string name="strike_text">58,0000</string>
+    <string name="_10_off">10% off</string>
+    <string name="_12_dec_2022">12 Dec 2022</string>
+    <string name="_08_00_am_09_00_am">08:00 AM - 09:00 AM</string>
+    <string name="period_1">Period 1</string>
+    <string name="down_arrow">TODO</string>
+    <string name="calenderIcon">TODO</string>
+    <string name="gridicon1">gridIcon1</string>
+    <string name="hettie_jones">Hettie Jones</string>
+    <string name="mathematics">Mathematics</string>
+    <string name="medical_details">Medical Details</string>
+    <string name="health_condition">Health Condition</string>
+    <string name="indicate_if_your_child_has_any_of_the_following_health_n_conditions">Indicate if your child has any of the following health \n conditions.</string>
+    <string name="asthma">Asthma</string>
+    <string name="food_allergies">Food Allergies</string>
+    <string name="does_your_child_have_any_food_allergies">Does your child have any food allergies?</string>
+    <string name="other_food_allergy_n_reason_for_leave">Reason for leave…</string>
+    <string name="does_your_child_have_any_vaccine_allergies">Does your child have any Vaccine allergies?</string>
+    <string name="medication_details">Medication Details</string>
+    <string name="please_list_all_medications_your_chield_is_currently_taking">Please list all medications your chield is currently taking.</string>
+    <string name="namePlaceholder">Name</string>
+    <string name="other_vaccine_allergy">Other vaccine allergy</string>
+    <string name="vaccine_allergies">Vaccine Allergies</string>
+    <string name="doseplaceholder">Dose</string>
+    <string name="add_medication">Add Medication</string>
+    <string name="submits">Submit</string>
+    <string name="remove">Remove</string>
+    <string name="_500">500</string>
+    <string name="nameaa">Name</string>
+    <string name="dose">Dose</string>
+    <string name="health_conditions">Health Condition</string>
+</resources>

@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragments.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/green"
+                android:padding="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="78dp"
+                    android:layout_height="81dp"
+                    android:contentDescription=""
+                    android:src="@drawable/profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/name"
+                    android:fontFamily="@font/yellixsemibold"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView4"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Good day!"
+                    android:fontFamily="@font/yellixregular"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView7"
+
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+                <ImageView
+                    android:id="@+id/logout"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/logout_icon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/calendar"
+                    app:layout_constraintBottom_toBottomOf="@+id/logout"
+                    app:layout_constraintEnd_toStartOf="@+id/logout" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/cardcolor"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView4">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/confetti"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:fontFamily="@font/yellixsemibold"
+                        android:text="Happy Birthday, Andrews!"
+                        android:textSize="15sp"
+                        app:layout_constraintStart_toEndOf="@+id/imageView6"
+                        app:layout_constraintStart_toStartOf="@+id/imageView6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:lineHeight="20sp"
+                        android:fontFamily="@font/yellixregular"
+                        android:text="Wishing you a day filled with\n happiness and a year filled with joy.\n Happy birthday"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="@+id/textView9"
+                        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="15dp"
+                    app:layout_constraintStart_toStartOf="@+id/constraintLayout3"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout3">
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/Sunday"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:backgroundTint="@drawable/buttonbg"
+                        android:padding="5dp"
+                        android:text="S"
+                        android:fontFamily="@font/yellixregular"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toStartOf="@+id/Monday"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/Monday"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:backgroundTint="@drawable/buttonbg"
+                        android:padding="5dp"
+                        android:text="M"
+                        android:fontFamily="@font/yellixregular"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/Sunday"
+                        app:layout_constraintEnd_toStartOf="@+id/Tuesday"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/Sunday" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/Tuesday"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:fontFamily="@font/yellixregular"
+                        android:backgroundTint="@drawable/buttonbg"
+                        android:padding="5dp"
+                        android:text="T"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/Monday"
+                        app:layout_constraintEnd_toStartOf="@+id/wedesday"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/Monday" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/wedesday"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:backgroundTint="@drawable/buttonbg"
+                        android:padding="5dp"
+                        android:text="W"
+                        android:fontFamily="@font/yellixregular"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/Tuesday"
+                        app:layout_constraintEnd_toStartOf="@+id/Thursday"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/Tuesday" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/Thursday"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:backgroundTint="@color/lightgreen"
+                        android:padding="5dp"
+                        android:text="T"
+                        android:fontFamily="@font/yellixregular"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/wedesday"
+                        app:layout_constraintEnd_toStartOf="@+id/friday"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/wedesday" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/friday"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:backgroundTint="@drawable/buttonbg"
+                        android:padding="5dp"
+                        android:text="F"
+                        android:fontFamily="@font/yellixregular"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/Thursday"
+                        app:layout_constraintEnd_toStartOf="@+id/saturday"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/Thursday" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/saturday"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:backgroundTint="@drawable/buttonbg"
+                        android:padding="5dp"
+                        android:text="S"
+                        android:fontFamily="@font/yellixregular"
+                        android:textColor="@color/grey"
+                        android:textSize="15sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/friday"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/friday" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/grey"
+                        app:layout_constraintTop_toBottomOf="@+id/wedesday"
+                        tools:layout_editor_absoluteX="0dp" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view2">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/cards"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.5" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="130dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/birthday"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--//viwepager-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/constraintLayout4"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout4">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5" />
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/into_tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="bottom"
+                    app:tabBackground="@drawable/tab_pager_selector"
+                    app:tabGravity="center"
+                    android:background="@color/white"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabPaddingEnd="10dp"
+                    app:tabPaddingStart="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/viewpager"
+                    app:layout_constraintStart_toStartOf="@+id/viewpager"
+                    app:layout_constraintEnd_toEndOf="@+id/viewpager"
+                    app:layout_constraintBottom_toBottomOf="@+id/constraintLayout5"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CurrentAssignments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="@color/lighttgrey"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+                 app:layout_constraintStart_toStartOf="@+id/constraintLayout5"
+                app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
+                tools:layout_editor_absoluteX="0dp">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yellixsemibold"
+                    android:text="Current Assignments"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/parentassignment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/adapter_assignment_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintEnd_toEndOf="@+id/textView10"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            homeworksection-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeworkSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:minHeight="300dp"
+                app:layout_constraintTop_toBottomOf="@+id/CurrentAssignments"
+                app:layout_constraintStart_toStartOf="@+id/CurrentAssignments"
+                app:layout_constraintEnd_toEndOf="@+id/CurrentAssignments">
+
+                <TextView
+                    android:id="@+id/homeworks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Today’s Homework"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/yellixsemibold"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/subjects"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="87dp"
+                    app:layout_constraintTop_toBottomOf="@+id/homeworks"
+                    app:layout_constraintStart_toStartOf="@+id/homeworks"
+                    app:layout_constraintEnd_toEndOf="@+id/homeworks"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CourseSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:background="@color/lighttgrey"
+                app:layout_constraintTop_toBottomOf="@+id/homeworkSection"
+                app:layout_constraintStart_toStartOf="@+id/homeworkSection"
+                app:layout_constraintEnd_toEndOf="@+id/homeworkSection">
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/continue_courses"
+                    android:fontFamily="@font/yellixsemibold"
+                    android:layout_marginBottom="20dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/courseCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView12"
+                    app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/BooksSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="300dp"
+                android:padding="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/CourseSection"
+                app:layout_constraintStart_toStartOf="@+id/CourseSection"
+                app:layout_constraintEnd_toEndOf="@+id/CourseSection">
+
+                <TextView
+                    android:id="@+id/booktitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue Reading"
+                    android:fontFamily="@font/yellixsemibold"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/books"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/booktitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/gridsection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="@+id/BooksSection"
+                app:layout_constraintStart_toStartOf="@+id/BooksSection"
+                app:layout_constraintTop_toBottomOf="@+id/BooksSection">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/cardelevation"
+                    android:padding="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.5">
+
+                    <TextView
+                        android:id="@+id/moreClasstitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/yellixsemibold"
+                        android:text="More in your class"
+                        android:paddingBottom="15dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="17sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvgrid"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:listitem="@layout/adapter_grid_card"
+                        app:layout_constraintEnd_toEndOf="@+id/moreClasstitle"
+                        app:layout_constraintStart_toStartOf="@+id/moreClasstitle"
+                        app:layout_constraintTop_toBottomOf="@+id/moreClasstitle" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

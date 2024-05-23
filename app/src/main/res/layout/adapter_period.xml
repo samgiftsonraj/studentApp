@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    android:layout_margin="10dp"
+    app:cardElevation="0.5dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/periodNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lighttgrey"
+            android:text="Period 1"
+            android:fontFamily="@font/yellixsemibold"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:paddingVertical="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/periodNum">
+
+            <TextView
+                android:id="@+id/timings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="8AM - 9AM"
+                android:fontFamily="@font/yellixregular"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/subjectName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mathematics"
+                android:fontFamily="@font/yellixsemibold"
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timings" />
+
+            <ImageView
+                android:layout_width="19dp"
+                android:layout_height="23dp"
+                android:src="@drawable/periods_mathematics_tick"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.866"
+                app:layout_constraintStart_toEndOf="@+id/subjectName"
+                app:layout_constraintTop_toTopOf="@+id/subjectName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

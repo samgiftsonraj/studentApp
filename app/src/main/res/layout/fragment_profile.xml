@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".view.fragments.LearnFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/baseline_arrow_back_24"
+            app:title="Enrollment Form"
+            app:titleTextColor="@color/white"
+
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="800dp"
+        android:paddingHorizontal="15.5dp"
+        android:paddingVertical="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout3">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medical_details"
+            android:fontFamily="@font/yellixbold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/healthSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/pageTitle"
+            app:layout_constraintTop_toBottomOf="@+id/pageTitle">
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/health_condition"
+                android:fontFamily="@font/yellixsemibold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/healthSection" />
+
+            <TextView
+                android:id="@+id/healthConditionDescrip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yellixmedium"
+                android:text="@string/indicate_if_your_child_has_any_of_the_following_health_n_conditions"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                app:layout_constraintEnd_toEndOf="@+id/healthConditionDescrip"
+                app:layout_constraintTop_toBottomOf="@+id/healthConditionDescrip"
+                app:layout_constraintStart_toStartOf="@+id/healthConditionDescrip"
+                tools:listitem="@layout/adapter_checkbox_card" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/foodAllergySection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/healthSection"
+            app:layout_constraintEnd_toEndOf="@+id/healthSection"
+            app:layout_constraintTop_toBottomOf="@+id/healthSection">
+
+            <TextView
+                android:id="@+id/foodAllergyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/food_allergies"
+                android:fontFamily="@font/yellixsemibold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/foodAllergySection" />
+
+            <TextView
+                android:id="@+id/foodAllergyQues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yellixmedium"
+                android:text="@string/does_your_child_have_any_food_allergies"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/foodAllergyTitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCheckbox2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                app:layout_constraintEnd_toEndOf="@+id/foodAllergyQues"
+                app:layout_constraintTop_toBottomOf="@+id/foodAllergyQues"
+                app:layout_constraintStart_toStartOf="@+id/foodAllergyQues"
+                tools:listitem="@layout/adapter_checkbox_card" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Otherallergy1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/text_field_corner"
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="@id/rvCheckbox2"
+                app:layout_constraintEnd_toEndOf="@id/rvCheckbox2"
+                app:layout_constraintTop_toBottomOf="@+id/rvCheckbox2">
+                <TextView
+                    android:id="@+id/Otherallergy1title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other_vaccine_allergy"
+                    android:textSize="12sp"
+                    android:textColor="@color/lightgrey"
+                    app:layout_constraintStart_toStartOf="@id/Otherallergy1"
+                    app:layout_constraintTop_toTopOf="@id/Otherallergy1"/>
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/other_food_allergy_n_reason_for_leave"
+                    android:textColorHint="@color/lightgrey"
+                    app:layout_constraintStart_toStartOf="@id/Otherallergy1title"
+                    app:layout_constraintTop_toBottomOf="@+id/Otherallergy1title"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/VaccineAllergySection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/foodAllergySection"
+            app:layout_constraintEnd_toEndOf="@+id/foodAllergySection"
+            app:layout_constraintTop_toBottomOf="@+id/foodAllergySection">
+
+            <TextView
+                android:id="@+id/vaccineAllergyTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/vaccine_allergies"
+                android:fontFamily="@font/yellixsemibold"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/VaccineAllergySection" />
+
+            <TextView
+                android:id="@+id/vaccineAllergyQues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yellixmedium"
+                android:text="@string/does_your_child_have_any_vaccine_allergies"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vaccineAllergyTitle" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCheckbox3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                app:layout_constraintEnd_toEndOf="@+id/vaccineAllergyQues"
+                app:layout_constraintTop_toBottomOf="@+id/vaccineAllergyQues"
+                app:layout_constraintStart_toStartOf="@+id/vaccineAllergyQues"
+                tools:listitem="@layout/adapter_checkbox_card" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/Otherallergy2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/text_field_corner"
+                android:padding="5dp"
+                app:layout_constraintStart_toStartOf="@id/rvCheckbox3"
+                app:layout_constraintEnd_toEndOf="@id/rvCheckbox3"
+                app:layout_constraintTop_toBottomOf="@+id/rvCheckbox3">
+                <TextView
+                    android:id="@+id/Otherallergytitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/other_vaccine_allergy"
+                    android:textSize="12sp"
+                    android:textColor="@color/lightgrey"
+                    app:layout_constraintStart_toStartOf="@id/Otherallergy2"
+                    app:layout_constraintTop_toTopOf="@id/Otherallergy2"/>
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="@string/other_food_allergy_n_reason_for_leave"
+                    android:textColorHint="@color/lightgrey"
+                    app:layout_constraintStart_toStartOf="@id/Otherallergytitle"
+                    app:layout_constraintTop_toBottomOf="@+id/Otherallergytitle"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/MedDetailsSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/VaccineAllergySection"
+            app:layout_constraintEnd_toEndOf="@+id/VaccineAllergySection"
+            app:layout_constraintTop_toBottomOf="@+id/VaccineAllergySection"
+            >
+            <TextView
+                android:id="@+id/MedDetailsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/medication_details"
+                android:textColor="@color/black"
+                android:fontFamily="@font/yellixsemibold"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/MedDetailsSection"
+            />
+            <TextView
+                android:id="@+id/MedDetailsQues"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/please_list_all_medications_your_chield_is_currently_taking"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/yellixmedium"
+                app:layout_constraintStart_toStartOf="@+id/MedDetailsTitle"
+                app:layout_constraintTop_toBottomOf="@id/MedDetailsTitle"
+                app:layout_constraintEnd_toEndOf="@id/MedDetailsTitle"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMedicalDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:listitem="@layout/adapter_med_detail_design"
+                    app:layout_constraintStart_toStartOf="@id/MedDetailsQues"
+                    app:layout_constraintEnd_toEndOf="@id/MedDetailsQues"
+                    app:layout_constraintTop_toBottomOf="@id/MedDetailsQues"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addMedication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/baseline_add_24"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/design_default_color_primary"
+
+                android:text="@string/add_medication"
+                android:textColor="@color/design_default_color_primary"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/rvMedicalDetails"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/rvMedicalDetails"
+                app:layout_constraintTop_toBottomOf="@+id/rvMedicalDetails"
+                app:rippleColor="@color/lightgrey" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/Remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:backgroundTint="@color/white"
+                android:drawableStart="@drawable/subtract_icon"
+                android:drawableTint="@color/red"
+                android:text="@string/remove"
+                android:textColor="@color/red"
+                app:layout_constraintEnd_toEndOf="@+id/rvMedicalDetails"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@id/addMedication"
+                app:layout_constraintTop_toBottomOf="@+id/rvMedicalDetails"
+                app:rippleColor="@color/lightgrey" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/submitBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="@string/submits"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/yellixbold"
+                        android:background="@drawable/buttonstyle"
+                        android:backgroundTint="@color/indicatorcolor"
+                        app:layout_constraintTop_toBottomOf="@+id/MedDetailsSection"
+                        app:layout_constraintStart_toStartOf="@id/MedDetailsSection"
+                        app:layout_constraintEnd_toEndOf="@+id/MedDetailsSection"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+

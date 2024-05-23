@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="10dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardelevation1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:adjustViewBounds="true"
+            android:background="@color/lighttgrey"
+            android:scaleType="fitXY"
+            android:src="@drawable/dell_laptop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:background="#f4deff"
+                android:rotation="-46"
+                app:layout_constraintEnd_toStartOf="@id/productImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="12dp"
+                    android:text="@string/_10_off"
+                    android:textColor="#8A11D0"
+                    android:textSize="11sp">
+
+                </com.google.android.material.textview.MaterialTextView>
+
+            </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/productcardContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/productImage"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/productImage"
+            app:layout_constraintTop_toBottomOf="@id/productImage">
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yellixmedium"
+                android:lineHeight="16sp"
+                android:text="@string/dell_13th_gen_laptop"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toTopOf="@+id/textView11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yellixsemibold"
+                android:text="4.0"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@+id/productName"
+                app:layout_constraintTop_toTopOf="@+id/ratingBar"
+                app:layout_constraintVertical_bias="0.75" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:progressTint="@color/yellow"
+                android:rating="4"
+                android:theme="@style/Widget.AppCompat.RatingBar"
+                app:layout_constraintBottom_toBottomOf="@+id/textView15"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toTopOf="@+id/textView15" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yellixregular"
+                android:text="(24)"
+                android:textColor="@color/palewhite"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+                app:layout_constraintStart_toEndOf="@+id/ratingBar" />
+
+            <ImageView
+                android:id="@+id/rupee_icon"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@drawable/baseline_currency_rupee_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/textView11"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                app:layout_constraintVertical_bias="0.32" />
+
+            <TextView
+                android:id="@+id/offerPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yellixsemibold"
+                android:lineHeight="24sp"
+                android:text="44,0000"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rupee_icon"
+                app:layout_constraintStart_toEndOf="@+id/rupee_icon"
+                app:layout_constraintTop_toBottomOf="@+id/textView11"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/rupee_icon_org"
+                android:layout_width="11sp"
+                android:layout_height="11sp"
+                android:backgroundTint="@color/grey"
+                android:backgroundTintMode="screen"
+                android:src="@drawable/baseline_currency_rupee_24"
+                app:layout_constraintStart_toStartOf="@id/rupee_icon"
+                app:layout_constraintTop_toBottomOf="@+id/rupee_icon" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                app:layout_constraintBottom_toBottomOf="@+id/oringinalPrice"
+                app:layout_constraintEnd_toEndOf="@+id/oringinalPrice"
+                app:layout_constraintStart_toEndOf="@+id/rupee_icon_org"
+                app:layout_constraintTop_toBottomOf="@+id/offerPrice" />
+            <TextView
+                android:id="@+id/oringinalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/yellixmedium"
+                android:lineHeight="19.2sp"
+                android:background="@drawable/strike_through_text"
+                android:text="@string/strike_text"
+                android:textColor="@color/grey"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@id/rupee_icon_org"
+                app:layout_constraintStart_toEndOf="@id/rupee_icon_org"
+                app:layout_constraintTop_toTopOf="@id/rupee_icon_org" >
+
+            </TextView>
+
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:paddingVertical="4dp"
+                app:flow_verticalAlign="center"
+               android:paddingHorizontal="11dp"
+                android:background="@drawable/buttonstyle"
+                android:backgroundTint="@color/indicatorcolor"
+                android:fontFamily="@font/yellixsemibold"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:text="Add"
+                android:textAllCaps="false"
+                android:textColor="@color/darkgrey"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.888"
+                app:layout_constraintStart_toEndOf="@+id/offerPrice"
+                app:layout_constraintTop_toTopOf="@+id/offerPrice" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

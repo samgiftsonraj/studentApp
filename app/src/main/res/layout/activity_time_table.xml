@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+   android:layout_marginBottom="10dp"
+    android:background="@color/white"
+    tools:context=".view.activities.TimeTableActivity"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/topbarcolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topappbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                app:navigationIcon="@drawable/baseline_arrow_back_24"
+
+                app:navigationIconTint="?attr/colorOnPrimary"
+                app:title="Time Table"
+                app:titleTextColor="?attr/colorOnPrimary" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/datePicker"
+            android:layout_width="@dimen/_115sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:padding="4dp"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/appBarLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appBarLayout2">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/calenderIcon"
+                android:src="@drawable/calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textView13"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="3dp"/>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/_12_dec_2022"
+                android:textColor="@color/white"
+                android:layout_marginEnd="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView10"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toStartOf="@+id/datePicker"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/down_arrow"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:padding="0dp"
+                android:layout_marginEnd="3dp"
+                android:src="@drawable/baseline_keyboard_arrow_down_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView13"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_marginTop="30dp"
+            android:id="@+id/tabLayout"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:tabPadding="5dp"
+            app:tabIndicatorFullWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rvPeriodTimeslots"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
+            app:tabIndicator="@drawable/tab_indicator"
+            app:tabIndicatorColor="@color/transparent"
+            app:tabBackground="@color/white"
+            app:tabIndicatorGravity="stretch"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/white">
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:backgroundTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tabLayout"
+            app:layout_constraintEnd_toEndOf="@+id/tabLayout"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
+            >
+        </androidx.viewpager2.widget.ViewPager2>
+        <androidx.recyclerview.widget.RecyclerView
+            android:paddingTop="90dp"
+            android:id="@+id/rvPeriodTimeslots"
+            android:background="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            app:flow_verticalAlign="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/adapter_timetable_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
